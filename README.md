@@ -1,2 +1,2 @@
 # RV32I-CPU-
-Building a CPU from scratch using the RV32I instruction set 
+Building a CPU from scratch using RV32I instruction set 
