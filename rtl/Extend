@@ -1,0 +1,9 @@
+// Extensor de sinal: imediato de 12 bits -> 32 bits
+module Extend (
+    input  logic [11:0] Imm12,
+    output logic [31:0] Imm32
+);
+
+    assign Imm32 = {{20{Imm12[11]}}, Imm12};
+
+endmodule
