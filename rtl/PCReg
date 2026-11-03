@@ -1,0 +1,16 @@
+// Registrador PC de 32 bits, reset assíncrono ativo em nível baixo
+module PCReg (
+    input  logic        clk,
+    input  logic        rst,
+    input  logic [31:0] PCin,
+    output logic [31:0] PC
+);
+
+    always_ff @(posedge clk or negedge rst) begin
+        if (!rst)
+            PC <= 32'd0;
+        else
+            PC <= PCin;
+    end
+
+endmodule
